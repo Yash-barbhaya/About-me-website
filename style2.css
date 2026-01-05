@@ -1,0 +1,202 @@
+/* =====================================================
+   RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #10243d;
+  color: #f4c76d;
+  text-align: center;
+}
+
+/* =====================================================
+   HERO SECTION (NO OVERLAP GUARANTEED)
+===================================================== */
+.hero-night {
+  position: relative;
+  min-height: 100vh;       /* IMPORTANT: pushes next section */
+  width: 100%;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to bottom,
+    #234d85,
+    #10243d
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 200px;   /* SPACE FOR TREES */
+}
+
+/* =====================================================
+   STARS (PURE WHITE & BRIGHT)
+===================================================== */
+.hero-night::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(3px 3px at 10% 20%, #ffffff, transparent),
+    radial-gradient(2px 2px at 25% 70%, #ffffff, transparent),
+    radial-gradient(3px 3px at 40% 40%, #ffffff, transparent),
+    radial-gradient(2px 2px at 55% 85%, #ffffff, transparent),
+    radial-gradient(3px 3px at 70% 25%, #ffffff, transparent),
+    radial-gradient(2px 2px at 85% 60%, #ffffff, transparent);
+
+  opacity: 1;
+  z-index: 0;
+}
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+.hero-night h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 4.5rem;
+  z-index: 2;
+  color: #f4c76d;
+
+  text-shadow:
+    0 0 10px rgba(255, 200, 120, 0.6),
+    0 0 25px rgba(255, 160, 60, 0.4);
+}
+
+.hero-night h2 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #ffb347;
+  z-index: 2;
+}
+
+/* =====================================================
+   TREES (INSIDE HERO ONLY)
+===================================================== */
+.mountain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =====================================================
+   ABOUT SECTION (NO OVERLAP)
+===================================================== */
+.about {
+  background-color: #173358; /* CHANGE THIS LATER */
+  padding: 140px 20px;
+}
+
+.profile {
+  width: 160px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 3px solid #f4c76d;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 650px;
+  margin: auto;
+  color: #ffe1a8;
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+hr {
+  width: 60%;
+  margin: 80px auto;
+  border: none;
+  border-top: 1px solid rgba(255, 220, 150, 0.4);
+}
+
+/* =====================================================
+   SKILLS
+===================================================== */
+.skills {
+  padding: 120px 20px;
+  background-color: #0e2a47;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.skill.gif {
+  width: 200px;
+  border-radius: 12px;
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+.contact {
+  padding: 120px 20px;
+}
+
+.contact-buttons {
+  margin-top: 30px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #f4c76d, #ff9f43);
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #f4c76d;
+  color: #f4c76d;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+  padding: 40px 0;
+  background-color: #0b1e33;
+}
+
+footer a {
+  color: #f4c76d;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+}
